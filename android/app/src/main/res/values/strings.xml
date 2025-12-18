@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Softvence Task</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">4305622669666816</string>
+    <string name="facebook_client_token">817f33a379e7ab1affad7d7f5be8bf5b</string>
+    <string name="fb_login_protocol_scheme">fb4305622669666816</string>
+</resources>

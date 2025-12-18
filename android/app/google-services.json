@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "660278222064",
+    "project_id": "softvence-interview-task",
+    "storage_bucket": "softvence-interview-task.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660278222064:android:3bff540c0363abcbc8f635",
+        "android_client_info": {
+          "package_name": "com.example.softvence_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660278222064-9i2ga7ssepsg999ici1n02ik4biap95r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.softvence_task",
+            "certificate_hash": "cd7b18ccf7f7ef01c4c2507133bcbd7f3f1f9758"
+          }
+        },
+        {
+          "client_id": "660278222064-mmfaau101mv23vjckuu8k41urm4tumq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDKsNGLr_XMWDZdIE-FUzo-4bF0HsEiBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660278222064-mmfaau101mv23vjckuu8k41urm4tumq5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "660278222064-c9vqa7pegs2q59mm3ljmbhl26v0juvbi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.softvenceTask"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
