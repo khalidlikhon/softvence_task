@@ -94,6 +94,7 @@ class NotificationSnackbarService {
 
   void _showSnackbar({required String title, required String body}) {
     print('Showing snackbar: $title - $body'); // debug
+
     Get.snackbar(
       title,
       body,

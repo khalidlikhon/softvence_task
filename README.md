@@ -1,16 +1,73 @@
-# softvence_task
+# Flutter Developer Technical Task – Softvence Agency
 
-A new Flutter project.
+## 📌 Overview
 
-## Getting Started
+This project was developed as part of a **Flutter technical interview task** for **Softvence Agency**.
+The focus was on **clean architecture, proper GetX usage, and real-world Firebase integration**, rather than UI only.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🧱 Architecture & Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The application follows a **clean and feature-based architecture**.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* **Navigation** is handled centrally using **GetX routes** (`routes/` folder)
+* **Business logic** is handled entirely inside **GetX Controllers**
+* **UI (presentation layer)** contains only widgets and reactive state listeners
+* No logic is written directly inside UI files
+
+```
+lib/
+├── core/              → data models & services
+├── presentation/      → feature-wise UI & controllers
+├── routes/            → centralized GetX navigation
+├── utils/             → reusable helpers & widgets
+└── main.dart          → app initialization
+```
+
+---
+
+## 🔧 Key Implementation Decisions
+
+* **GetX** used strictly for:
+
+    * State management
+    * Dependency injection
+    * Navigation
+* **Firebase Authentication**
+
+    * Google Sign-In
+    * Facebook Login
+* **Firebase Cloud Messaging**
+
+    * Foreground, background & terminated handling
+    * Notification tap navigation
+* Clean separation between:
+
+    * UI
+    * Controllers
+    * Services
+
+---
+
+## 📸 Screenshots
+
+*(Screenshots are added below to demonstrate core features)*
+
+* Splash Screen
+* Login Screen
+* Home Screen
+* Push Notification
+* Notification Detail Screen
+
+---
+
+## ⏱ Development Time
+
+**1–2 days**, prioritizing **code quality, clarity, and structure**.
+
+---
+
+## 📝 Note
+
+This task reflects a real-world Flutter development approach with emphasis on **engineering discipline, maintainability, and ownership**.
