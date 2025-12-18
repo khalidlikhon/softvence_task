@@ -39,7 +39,7 @@ class HomeController extends GetxController {
   final RxList<Map<String, String>> brands = <Map<String, String>>[
     {
       "url":
-      "https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c0a6.png", // Subaru logo
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtnIE0v4olIQoEkN-u_uAO_u5q7B6M7dNyg&s", // Subaru logo
       "name": "Subaru",
     },
     {
@@ -49,17 +49,17 @@ class HomeController extends GetxController {
     },
     {
       "url":
-      "https://www.freepnglogos.com/uploads/chery-logo-png/chery-logo-vector-download-png-10.png", // Chery logo
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfGPY6yDfsS30DIM9zRwD9EMwVfcD8drd6Rw&s", // Chery logo
       "name": "Chery",
     },
     {
       "url":
-      "https://www.freepnglogos.com/uploads/suzuki-logo-png/suzuki-logo-png-vector-download-9.png", // Suzuki logo
+      "https://upload.wikimedia.org/wikipedia/commons/e/ee/Suzuki_logo_2025_%28vertical%29.svg", // Suzuki logo
       "name": "Suzuki",
     },
     {
       "url":
-      "https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c0af.png", // Toyota logo
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmAd01mufI_vHiPQ7T0zESsTDGiwLW8QzAmg&s", // Toyota logo
       "name": "Toyota",
     },
     {
