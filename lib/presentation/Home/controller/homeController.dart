@@ -54,7 +54,7 @@ class HomeController extends GetxController {
     },
     {
       "url":
-      "https://upload.wikimedia.org/wikipedia/commons/e/ee/Suzuki_logo_2025_%28vertical%29.svg", // Suzuki logo
+      "https://e7.pngegg.com/pngimages/121/586/png-clipart-suzuki-jimny-car-logo-suzuki-cdr-angle-thumbnail.png", // Suzuki logo
       "name": "Suzuki",
     },
     {
@@ -64,7 +64,7 @@ class HomeController extends GetxController {
     },
     {
       "url":
-      "https://www.freepnglogos.com/uploads/hyundai-logo-png/hyundai-logo-png-hyundai-logo-transparent-background-3.png", // Hyundai logo
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRijHSRfafTdeZhMq7UT5f3GZRmBXKmtoK3lg&s", // Hyundai logo
       "name": "Hyundai",
     },
     {
