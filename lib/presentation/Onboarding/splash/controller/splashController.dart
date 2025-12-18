@@ -10,41 +10,46 @@ class SplashController extends GetxController {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   Rx<AppUser?> currentUser = Rx<AppUser?>(null);
+  RxBool isChecking = false.obs;
 
-  @override
-  void onInit() {
-    super.onInit();
-    _handleStartupLogic();
-  }
+  Future<void> onLetsGoLongPress() async {
+    if (isChecking.value) return; // prevent double trigger
 
-  Future<void> _handleStartupLogic() async {
-    await Future.delayed(const Duration(seconds: 3));
+    isChecking.value = true;
+
+    // ⏳ Fake checking animation
+    await Future.delayed(const Duration(seconds: 2));
 
     final firebaseUser = FirebaseAuth.instance.currentUser;
 
-    // Check if app opened from notification (terminated)
-    final initialMessage = await FirebaseMessaging.instance.getInitialMessage();
+    // Check notification (terminated)
+    final initialMessage =
+    await FirebaseMessaging.instance.getInitialMessage();
 
     if (firebaseUser == null) {
-      // No user logged in
+      // 🚪 Not logged in
       Get.offAllNamed(Routes.login);
     } else {
-      // Fetch user data from Firestore
-      final doc = await _firestore.collection('users').doc(firebaseUser.uid).get();
+      // 👤 Fetch user
+      final doc =
+      await _firestore.collection('users').doc(firebaseUser.uid).get();
+
       if (doc.exists) {
         currentUser.value = AppUser.fromMap(doc.data()!);
       }
 
       if (initialMessage != null) {
-        // Open notification detail if app opened from notification
+        // 🔔 Open notification details
         Get.offAllNamed(
           Routes.notificationDetail,
           arguments: initialMessage.data,
         );
       } else {
-        // Otherwise go to home
+        // 🏠 Go home
         Get.offAllNamed(Routes.home);
       }
     }
+
+    isChecking.value = false;
   }
 }
