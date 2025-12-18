@@ -69,7 +69,7 @@ class HomeController extends GetxController {
     },
     {
       "url":
-      "https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c0b0.png", // Honda logo
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlshFw5sd950bHGtmV1PTfsshTPd8kM9wk1A&s", // Honda logo
       "name": "Honda",
     },
   ].obs;
