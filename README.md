@@ -43,7 +43,7 @@ lib/
 ### Authentication (Firebase)
 
 * Google Sign-In
-* Facebook Login (partial – see note below)
+* Facebook Login 
 * Persistent login session
 * Logout functionality
 * User info display (name, email, profile photo)
@@ -110,23 +110,6 @@ lib/
 * Home Screen
 * Push Notification
 * Notification Detail Screen
-
----
-
-## 📝 Note (Facebook Login)
-
-Due to a **technical configuration issue**, the **Facebook Login** feature could not be fully finalized within the given timeframe.
-
-The main reason was a **delay in reviewing the task email**, which reduced the available setup window.
-The remaining issue is **configuration-related only**, and the implementation flow is already in place.
-
-With additional time, this can be **fully resolved in a subsequent commit** without any architectural changes.
-
-The project was submitted on time with priority given to:
-
-* Clean architecture
-* GetX discipline
-* Overall code quality and structure
 
 ---
 
