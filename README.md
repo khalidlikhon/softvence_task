@@ -91,7 +91,18 @@ lib/
 
 ## 📸 Screenshots
 
-*(5 screenshots added below to demonstrate core functionality)*
+<table align="center">
+  <tr>
+    <td style="padding:10px 16px;"><img width="150" src="https://github.com/user-attachments/assets/3f783f15-907d-4c0b-8a16-f4bd6b8fe23d" alt="Splash Screen"/></td>
+    <td style="padding:10px 16px;"><img width="150" src="https://github.com/user-attachments/assets/523ed753-fb02-4db4-914d-2e1c5f9b064b" alt="Login Screen"/></td>
+    <td style="padding:10px 16px;"><img width="150" src="https://github.com/user-attachments/assets/f50d4650-2749-445e-81b0-bfc6124a61f5" alt="Signup Screen"/></td>
+  </tr>
+  <tr>
+    <td style="padding:10px 16px;"><img width="150" src="https://github.com/user-attachments/assets/1efe30ec-e465-4091-b02f-a5f935cbf46d" alt="Home Screen"/></td>
+    <td style="padding:10px 16px;"><img width="150" src="https://github.com/user-attachments/assets/e0ed6f54-cf43-4680-89c0-c35f11ee608f" alt="Push Notification"/></td>
+    <td style="padding:10px 16px;"><img width="150" src="https://github.com/user-attachments/assets/e6e1e8ca-4025-43e6-b32a-a08661719464" alt="Notification Detail Screen"/></td>
+  </tr>
+</table>
 
 * Splash Screen
 * Login Screen
