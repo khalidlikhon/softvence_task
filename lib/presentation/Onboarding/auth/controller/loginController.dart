@@ -22,19 +22,23 @@ class AuthController extends GetxController {
 
   final notificationService = NotificationLog();
 
-
   // ================= SAVE USER + FCM TOKEN =================
-  Future<void> _saveUserIfNotExists(User firebaseUser) async {
+  Future<void> _saveUserIfNotExists(
+    User firebaseUser, {
+    String? name,
+    String? email,
+    String? photoUrl,
+  }) async {
     final docRef = _firestore.collection('users').doc(firebaseUser.uid);
     final doc = await docRef.get();
 
     if (!doc.exists) {
       final appUser = AppUser(
         uid: firebaseUser.uid,
-        name: firebaseUser.displayName ?? '',
-        email: firebaseUser.email ?? '',
+        name: name ?? firebaseUser.displayName ?? '',
+        email: email ?? firebaseUser.email ?? '',
         phone: '',
-        photoUrl: firebaseUser.photoURL,
+        photoUrl: photoUrl ?? firebaseUser.photoURL,
         notificationEnabled: true,
       );
       await docRef.set(appUser.toMap());
@@ -105,20 +109,41 @@ class AuthController extends GetxController {
     try {
       isLoading.value = true;
 
+      // Step 1: Login with Facebook permissions
       final LoginResult result = await FacebookAuth.instance.login(
         permissions: ['email', 'public_profile'],
       );
 
       if (result.status == LoginStatus.success) {
+        // Step 2: Get Facebook user data
+        final userData = await FacebookAuth.instance.getUserData(
+          fields: "name,email,picture.width(200)",
+        );
+
+        final String name = userData['name'] ?? '';
+        final String email = userData['email'] ?? '';
+        final String profileImage = userData['picture']['data']['url'] ?? '';
+
+        debugPrint('FB Name: $name');
+        debugPrint('FB Email: $email');
+        debugPrint('FB Profile Image: $profileImage');
+
+        // Step 3: Firebase Auth with Facebook credential
         final credential = FacebookAuthProvider.credential(
           result.accessToken!.tokenString,
         );
-
         final authResult = await _auth.signInWithCredential(credential);
 
-        await _saveUserIfNotExists(authResult.user!);
+        // Step 4: Save user info in Firestore with profile image
+        await _saveUserIfNotExists(
+          authResult.user!,
+          name: name,
+          email: email,
+          photoUrl: profileImage,
+        );
 
         await notificationService.logLogin('Facebook');
+
         Get.snackbar('Success', 'Logged in with Facebook');
         Get.offAllNamed(Routes.home);
       } else if (result.status == LoginStatus.cancelled) {
@@ -126,6 +151,7 @@ class AuthController extends GetxController {
       } else {
         Get.snackbar('Error', result.message ?? 'Facebook login failed');
       }
+
       debugPrint(result.message);
     } catch (e) {
       Get.snackbar('Error', e.toString());

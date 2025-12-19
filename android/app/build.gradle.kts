@@ -49,10 +49,11 @@ android {
     }
 }
 
+
 dependencies {
     implementation("androidx.multidex:multidex:2.0.1")
-    implementation("com.facebook.android:facebook-android-sdk:[5,6)")
-    implementation("com.google.android.gms:play-services-auth:20.7.0") // Google Sign-In
+    implementation("com.facebook.android:facebook-android-sdk:latest.release")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 }
 
 flutter {
